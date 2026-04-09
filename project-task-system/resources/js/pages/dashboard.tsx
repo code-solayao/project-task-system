@@ -2,7 +2,9 @@
 
 export default function Dashboard() {
     return (
-        <></>
+        <div>
+            Project/Task Management System - Dashboard
+        </div>
     );
 }
 

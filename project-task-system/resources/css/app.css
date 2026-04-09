@@ -141,3 +141,9 @@
         @apply bg-background text-foreground;
     }
 }
+
+@layer components {
+    .btn-home {
+        @apply border-0 rounded w-36 h-16 text-center cursor-pointer bg-blue-700 hover:bg-blue-600 active:bg-blue-800 transition ease-in-out;
+    }
+}
