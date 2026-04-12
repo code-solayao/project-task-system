@@ -1,3 +1,5 @@
+import { Link } from '@inertiajs/react';
+import { signup } from '@/routes';
 
 export default function Index() {
     return (
@@ -10,9 +12,11 @@ export default function Index() {
                     <button className="btn-home">
                         <span className="text-blue-200 font-medium text-xl">Log In</span>
                     </button>
-                    <button className="btn-home bg-emerald-700 hover:bg-emerald-600 active:bg-emerald-800">
-                        <span className="text-blue-200 font-medium text-xl">Sign Up</span>
-                    </button>
+                    <Link href={signup()}>
+                        <button className="btn-home bg-emerald-700 hover:bg-emerald-600 active:bg-emerald-800">
+                            <span className="text-blue-200 font-medium text-xl">Sign Up</span>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

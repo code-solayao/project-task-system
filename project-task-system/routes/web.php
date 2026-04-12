@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -16,6 +17,11 @@ Route::get('/laravel-dashboard', function () {
 })->middleware(['auth', 'verified'])->name('laravel_dashboard');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::controller(AuthController::class)->group(function () {
+    Route::get('/signup', 'signupView')->name('signup.view');
+    Route::post('/signup', 'signup')->name('signup');
+});
 
 Route::controller(HomeController::class)->middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', 'dashboard')->name('dashboard');
