@@ -19,7 +19,7 @@ Route::get('/laravel-dashboard', function () {
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::controller(AuthController::class)->group(function () {
-    Route::get('/signup', 'signupView')->name('signup.view');
+    Route::get('/signup', 'signupView')->name('signup_view');
     Route::post('/signup', 'signup')->name('signup');
 });
 
